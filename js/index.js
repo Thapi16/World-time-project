@@ -13,7 +13,7 @@ if (RandburgElement) {
 // Moretele
 let MoreteleElement = document.querySelector("#Moretele");
 if (MoreteleElement) {
-  let parisDateElement = MoreteleElement.querySelector(".date");
+  let MoreteleDateElement = MoreteleElement.querySelector(".date");
   let MoreteleTimeElement = MoreteleElement.querySelector(".time");
   let MoreteleTime = moment().tz("Africa/Johannesburg");
 
