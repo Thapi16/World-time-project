@@ -1,33 +1,33 @@
-let RandburgElement = document.querySelector("#Randburg");
-if (RandburgElement) {
-  let RandburgDateElement = RandburgElement.querySelector(".date");
-  let RandburgTimeElement = RandburgElement.querySelector(".time");
-  let RandburgTime = moment().tz("Africa/Johannesburg");
+function updateTime() {
+  //Randburg
+  let randburgElement = document.querySelector("#randburg");
+  if (randburgElement) {
+    let randburgDateElement = randburgElement.querySelector(".date");
+    let randburgTimeElement = randburgElement.querySelector(".time");
+    let randburgTime = moment().tz("Africa/Johannesburg");
 
-  RandburgDateElement.innerHTML = RandburgTime.format("MMMM	Do YYYY");
-  RandburgElement.innerHTML = RandburgTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
-}
+    randburgDateElement.innerHTML = randburgTime.format("MMMM	Do YYYY");
+    randburgTimeElement.innerHTML = randburgTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-// Moretele
-let MoreteleElement = document.querySelector("#Moretele");
-if (MoreteleElement) {
-  let MoreteleDateElement = MoreteleElement.querySelector(".date");
-  let MoreteleTimeElement = MoreteleElement.querySelector(".time");
-  let MoreteleTime = moment().tz("Africa/Johannesburg");
+  //Moretele
+  let moreteleElement = document.querySelector("#moretele");
+  if (moreteleElement) {
+    let moreteleDateElement = moreteleElement.querySelector(".date");
+    let moreteleTimeElement = moreteleElement.querySelector(".time");
+    let moreteleTime = moment().tz("Africa/Johannesburg");
 
-  MoreteleDateElement.innerHTML = MoreteleTime.format("MMMM	Do YYYY");
-  MoreteleTimeElement.innerHTML = MoreteleTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
+    moreteleDateElement.innerHTML = moreteleTime.format("MMMM	Do YYYY");
+    moreteleTimeElement.innerHTML = moreteleTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-  if (cityTimeZone === "current") {
-    cityTimeZone = moment.tz.guess();
-  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
