@@ -4,7 +4,7 @@ function updateTime() {
   if (randburgElement) {
     let randburgDateElement = randburgElement.querySelector(".date");
     let randburgTimeElement = randburgElement.querySelector(".time");
-    let randburgTime = moment().tz("Africa/Johannesburg");
+    let randburgTime = moment().tz("Africa/johannesburg");
 
     randburgDateElement.innerHTML = randburgTime.format("MMMM	Do YYYY");
     randburgTimeElement.innerHTML = randburgTime.format(
@@ -17,7 +17,7 @@ function updateTime() {
   if (moreteleElement) {
     let moreteleDateElement = moreteleElement.querySelector(".date");
     let moreteleTimeElement = moreteleElement.querySelector(".time");
-    let moreteleTime = moment().tz("Africa/Johannesburg");
+    let moreteleTime = moment().tz("Africa/johannesburg");
 
     moreteleDateElement.innerHTML = moreteleTime.format("MMMM	Do YYYY");
     moreteleTimeElement.innerHTML = moreteleTime.format(
