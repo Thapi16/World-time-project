@@ -12,15 +12,28 @@ function updateTime() {
     );
   }
 
-  //Moretele
-  let moreteleElement = document.querySelector("#moretele");
-  if (moreteleElement) {
-    let moreteleDateElement = moreteleElement.querySelector(".date");
-    let moreteleTimeElement = moreteleElement.querySelector(".time");
-    let moreteleTime = moment().tz("Africa/johannesburg");
+  //Los Angeles
+  let losAngelesElement = document.querySelector("#los-angeles");
+  if (losAngelesElement) {
+    let losAngelesDateElement = losAngelesElement.querySelector(".date");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+    let losAngelesTime = moment().tz("America/Los_Angeles");
 
-    moreteleDateElement.innerHTML = moreteleTime.format("MMMM	Do YYYY");
-    moreteleTimeElement.innerHTML = moreteleTime.format(
+    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
+    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  // Paris
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisTime = moment().tz("Europe/Paris");
+
+    parisDateElement.innerHTML = parisTime.format("MMMM	Do YYYY");
+    parisTimeElement.innerHTML = parisTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
